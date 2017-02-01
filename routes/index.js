@@ -25,11 +25,12 @@ router.get('/trends', function (req, res, next) {
       youTube.setKey('AIzaSyBzoV1Ucl0yz0D8XnB1ej3ABGVD8xeqWas');
 
       youTube.search(trend, 2, function(error, result) {
+          var videoResult = result.items[0].id.videoId
           if (error) {
             res.send(error);
           }
           else {
-            res.send(JSON.stringify(result, null, 2));
+            res.redirect('https://www.youtube.com/watch?v='+videoResult);
           }
       });
     }

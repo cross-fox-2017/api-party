@@ -9,7 +9,7 @@ var client = new Twit({
   access_token:         config.access_token,
   access_token_secret:  config.access_token_secret,
 })
-weather.api_key = '2b9939c2646b67990fd3fde583b7a225';
+weather.api_key = config.weather_api_key;
 weather.temp = 'c';
 
 /* GET home page. */

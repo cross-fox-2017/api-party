@@ -1,6 +1,5 @@
 var weather = require("Openweather-Node")
 var request = require("superagent")
-var util = require("util")
 
 weather.setAPPID("898243f3f307b291478599d072c0e854");
 weather.setCulture("fr");
@@ -16,21 +15,15 @@ var controller = {
           console.log(err);
         }
         response = JSON.parse(response.text)
-      //  res.json(response);
         weather.now(response[0].capital, function(err, aData)
         {
-            // console.log('ini response[0].name ', response[0].name);
-            // console.log('ini aData ', aData);
             if(err) console.log(err);
             else
             {
               res.json({
-                city_detail : response[0],
-                weather_detail: aData
+                city_detail : response[0].capital,
+                weather_detail: aData.values.main
               })
-                // aData.getKelvinTemp())
-                // console.log(aData.getDegreeTemp())
-                // console.log(aData.getFahrenheitTemp())
             }
         })
       })

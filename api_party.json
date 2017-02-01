@@ -1,0 +1,61 @@
+{
+	"id": "48b0d312-ac0f-7197-ac64-b63aa505a296",
+	"name": "API Party",
+	"description": "",
+	"order": [
+		"8e240a83-9758-4467-7591-60924e3e1f03",
+		"d47f4574-c6b0-a9aa-3c2c-40cd475ad46f"
+	],
+	"folders": [],
+	"timestamp": 1485931419977,
+	"owner": "1513431",
+	"public": false,
+	"published": false,
+	"requests": [
+		{
+			"id": "8e240a83-9758-4467-7591-60924e3e1f03",
+			"headers": "",
+			"url": "localhost:3000/request",
+			"preRequestScript": null,
+			"pathVariables": {},
+			"method": "POST",
+			"data": [
+				{
+					"key": "location",
+					"value": "Indonesia",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "urlencoded",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1485944150719,
+			"name": "localhost:3000/api/google_maps",
+			"description": "",
+			"collectionId": "48b0d312-ac0f-7197-ac64-b63aa505a296",
+			"responses": []
+		},
+		{
+			"id": "d47f4574-c6b0-a9aa-3c2c-40cd475ad46f",
+			"headers": "",
+			"url": "localhost:3000/api/wikipedia",
+			"preRequestScript": null,
+			"pathVariables": {},
+			"method": "GET",
+			"data": [],
+			"dataMode": "urlencoded",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1485938407255,
+			"name": "localhost:3000/api/wikipedia",
+			"description": "",
+			"collectionId": "48b0d312-ac0f-7197-ac64-b63aa505a296",
+			"responses": []
+		}
+	]
+}

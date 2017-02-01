@@ -44,7 +44,7 @@ router.get('/playtrendmusic/:num',function(req,res){
 
       spotifyApi.searchTracks(song)
         .then(function(data) {
-          res.send(data.body);
+          res.send(data.body.tracks.items[0].album.external_urls.spotify);
         }, function(err) {
           console.error(err);
         });

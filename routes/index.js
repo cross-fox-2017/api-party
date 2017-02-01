@@ -2,6 +2,7 @@ var express = require('express');
 var router = express.Router();
 var config = require('../config.json');
 var wikipedia = require('wikipedia-js');
+var wtf_wikipedia = require("wtf_wikipedia")
 
 var googleMapsClient = require('@google/maps').createClient({
   key: config.GOOGLE_API_KEY
@@ -13,6 +14,7 @@ router.post('/request', function(req, res) {
 
   requestMaps(req.body.location, function(locate){
     requestWikipedia(locate, function(result){
+      // res.render('result', {description: result})
       res.send(result)
     })
   })
@@ -41,7 +43,8 @@ function requestWikipedia(parameter, cb) {
       return;
     }
     // console.log("Query successful[query=%s, html-formatted-wiki-text=%s]", query, htmlWikiText);
-    let wiki = JSON.parse(htmlWikiText)
+    let wiki = wtf_wikipedia.parse(htmlWikiText)
+    // cb(wiki.infobox_template)
     cb(wiki)
   });
 };

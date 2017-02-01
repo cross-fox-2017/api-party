@@ -20,6 +20,7 @@
     "passport-twitter": "^1.0.4",
     "serve-favicon": "~2.3.0",
     "twitter": "^1.7.0",
-    "wikipedia-js": "0.0.6"
+    "wikipedia-js": "0.0.6",
+    "wtf_wikipedia": "^0.7.1"
   }
 }

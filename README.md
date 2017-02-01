@@ -2,6 +2,8 @@
 
 Get Recent timeline:
 ```
-http://localhost:3000/api/twitter
-http://localhost:3000/api/google_maps
+http://localhost:3000/request
 ```
+
+key = location
+value = country

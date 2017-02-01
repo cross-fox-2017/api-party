@@ -8,7 +8,8 @@ var bodyParser = require('body-parser');
 var index = require('./routes/index');
 var users = require('./routes/users');
 var twitter = require('./routes/twitter');
-var google_maps = require('./routes/google_maps');
+// var google_maps = require('./routes/google_maps');
+// var wikipedia = require('./routes/wikipedia');
 
 var app = express();
 
@@ -27,7 +28,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', index);
 app.use('/users', users);
 app.use('/api/twitter', twitter);
-app.use('/api/google_maps', google_maps);
+// app.use('/api/google_maps', google_maps);
+// app.use('/api/wikipedia', wikipedia);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

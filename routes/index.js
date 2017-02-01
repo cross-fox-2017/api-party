@@ -21,11 +21,12 @@ router.get('/search', function(req,res,next){
   let quer = req.query.q
   weather.get_weather_custom('city', quer, 'forecast').then(function(hasil){
       hasil='Based on data '+hasil[0].dt_txt+', there is will '+hasil[0].weather[0].description+' on '+quer
-      res.send(hasil);
+      let twittt = {status: hasil}
+      client.post('statuses/update', twittt, function(error, data, response) {
+        if (error) throw error;
+      res.send(data)
+      })
   })
 })
-
-
-
 
 module.exports = router;

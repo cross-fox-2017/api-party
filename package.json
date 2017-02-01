@@ -1,0 +1,24 @@
+{
+  "name": "api-party",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sanBastia/api-party.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sanBastia/api-party/issues"
+  },
+  "homepage": "https://github.com/sanBastia/api-party#readme",
+  "dependencies": {
+    "express": "^4.14.1",
+    "instagram-node": "^0.5.8",
+    "twitter": "^1.7.0"
+  }
+}

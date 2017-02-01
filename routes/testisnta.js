@@ -10,6 +10,7 @@ weather.api_key = '2b9939c2646b67990fd3fde583b7a225';
 weather.temp = 'c';
 
 weather.get_weather_custom('city', 'London', 'forecast').then(function(res){
+  res=res[0].weather[0].description
     console.log(res);
 },function(error){
     console.log(error)

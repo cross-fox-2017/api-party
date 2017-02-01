@@ -9,23 +9,31 @@ var client = new Twit({
   access_token:         config.access_token,
   access_token_secret:  config.access_token_secret,
 })
-weather.api_key = '2b9939c2646b67990fd3fde583b7a225';
-weather.temp = 'c';
+
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Welcome yomatwit' });
+  res.render('index', { title: 'Welcomel' });
 });
+
+
+var YouTube = require('youtube-node');
+
+var youTube = new YouTube();
+
+youTube.setKey('AIzaSyAJqZEC7ND-JsuikdgHNJZsZCsEScfTO18');
+
 
 router.get('/search', function(req,res,next){
   let quer = req.query.q
-  weather.get_weather_custom('city', quer, 'forecast').then(function(hasil){
-      hasil=hasil[0].weather[0].description
-      res.send(hasil);
+  youTube.search(quer, 1, function(error, result) {
+    if (error) {
+      res.send(error);
+    }
+    else {
+      res.send(JSON.stringify(result, null, 1));
+    }
   })
 })
-
-
-
 
 module.exports = router;

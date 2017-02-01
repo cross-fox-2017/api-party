@@ -1,0 +1,38 @@
+{
+  "name": "api-party",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "body-parser": "~1.15.2",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.2.0",
+    "ejs": "~2.5.2",
+    "express": "~4.14.0",
+    "install": "^0.8.4",
+    "morgan": "~1.7.0",
+    "npm": "^4.1.2",
+    "request": "^2.79.0",
+    "serve-favicon": "~2.3.0",
+    "soundcloud-node-api": "0.0.8",
+    "unirest": "^0.5.1",
+    "wikijs": "^1.1.1"
+  },
+  "description": "",
+  "main": "app.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Syanmil/api-party.git"
+  },
+  "author": "Syanmil",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Syanmil/api-party/issues"
+  },
+  "homepage": "https://github.com/Syanmil/api-party#readme",
+  "devDependencies": {
+    "nodemon": "^1.11.0"
+  }
+}

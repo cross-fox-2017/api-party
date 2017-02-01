@@ -24,18 +24,20 @@ router.get('/stalk',function(req, res) {
 
     const stalkingTarget = req.query.q
 
-    instagram.get('users/search', { q: stalkingTarget })
+    instagram.get('users/self')
     .then((data) => {
-        res.send(data);
+        let results = []
+        results.push(data)
+
+        twitter.get('users/search', {q : stalkingTarget}, function(error, tweets, response) {
+            results.push(tweets)
+            res.send(results);
+          })
     })
     .catch((err) => {
       res.send(err)
     })
 
-  twitter.get('users/search', {q : stalkingTarget}, function(error, tweets, response) {
-
-      res.send(tweets);
-    })
 
 
 

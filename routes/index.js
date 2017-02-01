@@ -11,9 +11,9 @@ var client = new Twitter({
 });
 
 router.get('/trends', function (req, res, next) {
-  var cekStatus = {status: req.query.q}
+  var cekTrends = {id: req.query.q}
 
-  client.get('trends/available', cekStatus, function(error, tweets, response) {
+  client.get('trends/place', cekTrends, function(error, tweets, response) {
     if(!error){
       res.send(tweets)
     }

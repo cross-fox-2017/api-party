@@ -23,9 +23,13 @@ router.get('/:id', function(req, res, next) {
         }
         request(keyword, function(error, response, body) {
             if (/Maaf, halaman yang anda cari tidak dapat kami temukan/g.test(body) == true) {
-                res.send("Film Dalam Proses Pembajakan, Mohon Sabar Menunggu");
+                res.send({
+                  status:"Film Dalam Proses Pembajakan, Mohon Sabar Menunggu"
+                });
             } else {
-                res.send(keyword);
+                res.send({
+                  linkDownload: keyword
+                });
             }
         })
     })

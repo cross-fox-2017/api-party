@@ -16,6 +16,7 @@
     "nodemon": "^1.11.0",
     "serve-favicon": "~2.3.0",
     "twitter": "^1.7.0",
-    "twitter-oauth": "0.0.6"
+    "twitter-oauth": "0.0.6",
+    "youtube-search": "^1.0.8"
   }
 }

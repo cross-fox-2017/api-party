@@ -20,7 +20,7 @@ router.get('/', function(req, res, next) {
 router.get('/search', function(req,res,next){
   let quer = req.query.q
   weather.get_weather_custom('city', quer, 'forecast').then(function(hasil){
-      hasil=hasil[0].weather[0].description
+      hasil='Based on data '+hasil[0].dt_txt+', there is will '+hasil[0].weather[0].description+' on '+quer
       res.send(hasil);
   })
 })

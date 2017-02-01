@@ -8,7 +8,7 @@ router.get('/timeline', tweet.timeline);
 /* GET home page. */
 router.get('/search/:search', tweet.search);
 /* get imdb */
-router.get('/search/actorTweet/movie/:title', imdb.getActorTweet)
+router.get('/search/actorTweet/movie', imdb.getActorTweet)
 
 
 module.exports = router;

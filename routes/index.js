@@ -18,21 +18,30 @@ router.get('/trends', function (req, res, next) {
 
   client.get('trends/place', cekTrends, function(error, tweets, response) {
     var trend = tweets[0].trends[0].name
-    if(!error){
+    if(trend){
 
       // Built by LucyBot. www.lucybot.com
 
       youTube.setKey('AIzaSyBzoV1Ucl0yz0D8XnB1ej3ABGVD8xeqWas');
 
       youTube.search(trend, 2, function(error, result) {
-          var videoResult = result.items[0].id.videoId
-          if (error) {
-            res.send(error);
+          if (result.items[0]) {
+            var videoResult = result.items[0].id.videoId
+            if (error) {
+              res.send(error);
+            }
+            else {
+              res.redirect('https://www.youtube.com/watch?v='+videoResult);
+            }
           }
           else {
-            res.redirect('https://www.youtube.com/watch?v='+videoResult);
+            res.send('no data')
           }
+
       });
+    }
+    else {
+      res.send('no trending topic available')
     }
   })
 

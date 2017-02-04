@@ -10,8 +10,9 @@ var marvel = api.createClient({
 });
 
 router.get('/', function(req, res, next) {
-  marvel.characters.findByName('spider-man')
+  marvel.characters.findAll(1, 1400)
   .then(function(data){
+    console.log(data);
     res.json(data)
   })
   .fail(console.error)

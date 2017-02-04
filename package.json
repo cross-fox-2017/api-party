@@ -15,11 +15,13 @@
     "install": "^0.8.4",
     "marvel-api": "^1.1.0",
     "morgan": "~1.7.0",
+    "node-foursquare-venues": "^1.1.0",
     "npm": "^4.1.2",
     "openweather-node": "0.0.4",
     "request": "^2.79.0",
     "serve-favicon": "~2.3.0",
     "soundcloud-node-api": "0.0.8",
+    "superagent": "^3.4.1",
     "unirest": "^0.5.1",
     "wikijs": "^1.1.1"
   },

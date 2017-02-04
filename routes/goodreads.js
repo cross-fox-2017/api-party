@@ -6,7 +6,9 @@ var goodreads = require('goodreads');
 var gr = new goodreads.client({ 'key': config.goodreads.key, 'secret': config.goodreads.secret });
 
 router.get('/', function(req, res, next) {
-  res.json("fail")
+  gr.showUser('SYANMIL', function(json) {
+    res.json(json);
+  })
 })
 
 module.exports = router;
